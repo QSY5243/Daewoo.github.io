@@ -129,9 +129,17 @@
         const resposeEl = document.getElementById('response');
         form.onsubmit = e =>{
         e.preventDefault.();
-          fetch('')
-        }
+          fetch(''
+          {
+            method: 'POST',
+              body: new URLSearchParams(new FormData(form))
+        })
+          .then(() => {
+          responseEl.textcontent="ส่งข้อมูลสำเร็จ ขอบคุณค่ะ";
+          form.reset();
+        })
+        .catch(() => responseEl.textContent="เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งนะคะ");
       </script>
     </center>
   </body>
-</html>a
+</html>
