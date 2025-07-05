@@ -123,11 +123,14 @@
       <button type="submit">ส่งข้อมูล</button>
       </form>
       <p id="response"></p>
-Main Script ends here
-Javascript starts here
+
       <script>
         const form = document.getElementById('studentform');
         const resposeEl = document.getElementById('response');
+        form.onsubmit = e =>{
+        e.preventDefault.();
+          fetch('')
+        }
       </script>
     </center>
   </body>
