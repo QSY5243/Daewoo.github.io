@@ -129,7 +129,7 @@
         const resposeEl = document.getElementById('response');
         form.onsubmit = e =>{
         e.preventDefault.();
-          fetch(''
+          fetch('https://script.google.com/a/macros/student.sk.ac.th/s/AKfycbwjoEBuoRSVcByXzrwEDyz2_Ulkh35HUmysGpEVWHQOJlQkUKlu6p2xfRZ5icmz91nOYg/exec'
           {
             method: 'POST',
               body: new URLSearchParams(new FormData(form))
@@ -139,6 +139,7 @@
           form.reset();
         })
         .catch(() => responseEl.textContent="เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งนะคะ");
+        };
       </script>
     </center>
   </body>
