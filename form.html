@@ -128,14 +128,14 @@
         const form = document.getElementById('studentform');
         const responseEl = document.getElementById('response');
         form.onsubmit = e =>{
-        e.preventDefault.();
+        e.preventDefault();
           fetch('https://script.google.com/macros/s/AKfycbzauDwkJE6a-7ICnDPpoqCitgPgp14HYlJjS2T7Mt5EWSjP3WrFagkrmzU7LTp7i2RESw/exec',
           {
             method: 'POST',
               body: new URLSearchParams(new FormData(form))
         })
           .then(() => {
-          responseEl.textcontent="ส่งข้อมูลสำเร็จ ขอบคุณค่ะ";
+          responseEl.textContent="ส่งข้อมูลสำเร็จ ขอบคุณค่ะ";
           form.reset();
         })
         .catch(() => responseEl.textContent="เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งนะคะ");
