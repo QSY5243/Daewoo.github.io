@@ -34,13 +34,17 @@
   <div class="content">
     1. น้ำแข็งแห้ง ปล่อยก๊าซอะไร
     <div class="choices">
-    
       <button onclick="checkAnswer(this,true)">ก.คาร์บอนไดออกไซด์</button>
       <button onclick="checkAnswer(this,false)">ข.คาร์บอนมอนอกไซด์</button>
       <button onclick="checkAnswer(this,false)">ค.ออกซิเจน</button>
       <button onclick="checkAnswer(this,false)">ง.มีเทน</button>
  </div>
+    <br><br>
   </div>
-  <br><br>
+  <script>>
+  function checkAnswer(btn,correct)
+    {btn.parentElement.querySelectorAll('button').forEach(b => b.disabled =true);
+    btn.classList.add(correct? 'correct' : 'incorrect');}</script>
+  
   
 </html>
