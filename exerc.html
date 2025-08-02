@@ -71,8 +71,13 @@
         <button onclick="checkAnswer(this,false)">ง.6900 ล้านปี</button>
       </div>
       <br><br>
-      4.
-    </div>
+      4.ทฤษฎีใดที่อัลเบิร์ต ไอน์สไตน์ คิดค้น
+      <div class="choices">
+        <button onclick="checkAnswer(this,false)">ก.ทฤษฎีแรงโน้มถ่วง</button>
+        <button onclick="checkAnswer(this,false)">ข.ทฤษฎีฟลอจิสตัน</button>
+        <button onclick="checkAnswer(this,true)">ค.ทฤษฎีสัมพัทธภาพ</button>
+        <button onclick="checkanswer(this,false)">ง.ทฤษฏีเซลล์</button>
+      </div>
     <script>
       function checkAnswer(btn, correct) {
         btn.parentElement.querySelectorAll('button').forEach(b => b.disabled = true);
