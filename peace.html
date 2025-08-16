@@ -60,10 +60,18 @@
       <iframe width="1204" height="677" src="https://www.youtube.com/embed/ejXNjMc9Wcc" title="วันนี้ในอดีต: 16 ส.ค. ครบรอบ 75 ปี วันสันติภาพไทย" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </center>
     </section>
+    <section>
+      <h1><mark>แบบทดสอบความรู้เรื่องวันสันติภาพไทย</mark></h1>
+      <p>1. วันสันติภาพไทย ตรงกับวันที่เท่าใดของทุกปี</p>
+      <button onclick="CheckAnswer(this,true)">16 สิงหาคม</button>
+      <button onclick="CheckAnswer(this,false)">12 สิงหาคม</button>
+      <button onclick="CheckAnswer(this,false)">5 ธันวาคม</button>
+      <button onclick="CheckAnswer(this,false)">15 ธันวาคม</button>
+    </section>
     <script>
       function checkAnswer(btn,correct)
         {btn.classList.add(correct?'correct:':'incorrect');
-         btn.parentElement.querySelectorAll('button').forEach(b=b.disabled=true);}
+         btn.parentElement.querySelectorAll('button').forEach(b=>b.disabled=true);}
     </script>
   </body>
 </html>
