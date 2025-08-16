@@ -1,106 +1,174 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>ข้อมูลงานวันสมานมิตร</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@500&family=Sarabun:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
-    <style>
-      body {font-family: "IBM Plex Sans Thai Looped", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-        background-image: url("https://www.mcot.net/uploads/article/202503/42da5b33f24d88aeca4bb4a73639b28c.jpeg");
-        background-size: cover;
-        background-position: center;
-        margin: 0;
-      }
-      header {
-        background-color: skyblue;
-        padding: 20px;
-        text-align: center;
-      }
-      .content {
-        background-color: pink;
-        padding: 30px;
-        max-width: 800px;
-        margin: auto;
-      }
-      footer{
-        text-align: center;
-        padding: 10px;
-        background-color: skyblue;}
-      <style>
-  textarea {
-    width: 100%;
-    max-width: 500px;
-    font-family: inherit;
-    padding: 10px;
-  }
-  button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-</style>
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1 style="color:blue">ประชาสัมพันธ์งานวันสมานมิตร 2025: Ticket to Home ของห้อง ม.104</h1>
-    </header>
-    <div class="content">
-      <center><h2 style="color:blue">กำหนดการงาน</h2></center>
-      <br>
-      ส่วนนี้รอเพิ่มเติมข้อมูล
-      <center><h2 style="color:blue">ข้อมูลทั่วไป</h2></center>
-      <p>ข้อมูลห้อง 104: มีนักเรียน 36 คน ครูที่ปรึกษา 2 ท่าน ได้แก่ครูจิตรลดา รุ่งเรือง และครูจิราภรณ์ กลัดป้อม</p>
-      <br>
-      <center><img src="2915.jpg" width=480 length=853></center>
-      <br>
-      <center>รูปรวมห้อง</center>
-      <br>
-      <p>วันและเวลาที่จัดงาน: วันจันทร์ที่ 25 สิงหาคม 2568 เวลา 08.00 - 12.00</p>
-      <br>
-      <p>สถานที่จัด: ลานหน้าห้องประชาสัมพันธ์ ตึกสวนกุหลาบรำลึก ชั้น 6</p>
-      <br>
-      <p>อาหารที่มีบริการ: อาหารอาหารอาหารอาหาร</p>
-      <br>
-      <p>ของที่ระลึก: โปรดติดตามในงาน</p>
-      <br>
-      <p>กิจกรรมที่จัด: ครูหรือคนที่ได้รับเชิญที่มาที่ซุ้ม 5 คนแรก เพียงแสดงบัตรเชิญก็จะได้รางวัลพิเศษ</p>
-      <br>
-      <center>
-        <form id="commentform">
-  <label>ความคิดเห็นที่มีต่อเว็บ
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <title>ข้อมูลงานวันสมานมิตร</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@500&family=Sarabun:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "IBM Plex Sans Thai Looped", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      background-image: url("https://www.mcot.net/uploads/article/202503/42da5b33f24d88aeca4bb4a73639b28c.jpeg");
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+    }
+    header {
+      background-color: skyblue;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      background-color: pink;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      font-family: inherit;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #commentsList {
+      margin-top: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .comment-entry {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color:blue">ประชาสัมพันธ์งานวันสมานมิตร 2025: Ticket to Home ของห้อง ม.104</h1>
+  </header>
+
+  <div class="content">
+    <center><h2 style="color:blue">กำหนดการงาน</h2></center>
+    <p>ส่วนนี้รอเพิ่มเติมข้อมูล</p>
+
+    <center><h2 style="color:blue">ข้อมูลทั่วไป</h2></center>
+    <p>ข้อมูลห้อง 104: มีนักเรียน 36 คน ครูที่ปรึกษา 2 ท่าน ได้แก่ครูจิตรลดา รุ่งเรือง และครูจิราภรณ์ กลัดป้อม</p>
     <br>
-      <textarea name="comment" rows="8" placeholder="ใส่ความคิดเห็นของคุณ"></textarea>
-      </label>
-      <br>
-      <button type="submit">ส่งข้อมูล</button>
+    <center><img src="2915.jpg" width="480" alt="รูปรวมห้อง"></center>
+    <center>รูปรวมห้อง</center>
+    <br>
+    <p>วันและเวลาที่จัดงาน: วันจันทร์ที่ 25 สิงหาคม 2568 เวลา 08.00 - 12.00</p>
+    <p>สถานที่จัด: ลานหน้าห้องประชาสัมพันธ์ ตึกสวนกุหลาบรำลึก ชั้น 6</p>
+    <p>อาหารที่มีบริการ: ....</p>
+    <p>ของที่ระลึก: โปรดติดตามในงาน</p>
+    <p>กิจกรรมที่จัด: ครูหรือคนที่ได้รับเชิญที่มาที่ซุ้ม 5 คนแรก เพียงแสดงบัตรเชิญก็จะได้รางวัลพิเศษ</p>
+
+    <center>
+      <form id="commentform">
+        <label>ชื่อของคุณ:
+          <input type="text" name="fullname" placeholder="กรอกชื่อของคุณ">
+        </label>
+        <label>ความคิดเห็นที่มีต่อเว็บ:
+          <textarea name="comment" rows="6" placeholder="ใส่ความคิดเห็นของคุณ"></textarea>
+        </label>
+        <button type="submit">ส่งความคิดเห็น</button>
       </form>
       <p id="response"></p>
-        <script>
-                const form = document.getElementById('commentform');
-        const responseEl = document.getElementById('response');
-        form.onsubmit = e =>{
-        e.preventDefault();
-          fetch('https://script.google.com/macros/s/AKfycbwKpnC2lGTifZjqtoBda-VWr1zRsMo5k3UbmkIyVKLgIDpjO6yAbqEpASZ2JPsKVEs8/exec',
-          {
-            method: 'POST',
-              body: new URLSearchParams(new FormData(form))
-        })
-          .then(() => {
-          responseEl.textContent="ส่งข้อมูลสำเร็จ ขอบคุณค่ะ";
-          form.reset();
-        })
-        .catch(() => responseEl.textContent="เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งนะคะ");
-        };
-      </script>
-        </center>
+    </center>
+
+    <div id="commentsList">
+      <h3>ความคิดเห็นที่ผ่านมา</h3>
+      <div id="comments"></div>
+    </div>
   </div>
+
   <footer>
     <br><br>
-    <font size="3">จัดทำโดย ด.ช.ศรัณธรณ์ ศุภเศรษฐวิทย์ ม.104 เลขที่ 22</font></footer>
-  </body>
+    <font size="3">จัดทำโดย ด.ช.ศรัณธรณ์ ศุภเศรษฐวิทย์ ม.104 เลขที่ 22</font>
+  </footer>
+
+  <script>
+    const form = document.getElementById('commentform');
+    const responseEl = document.getElementById('response');
+    const commentsDiv = document.getElementById('comments');
+
+    form.onsubmit = e => {
+      e.preventDefault();
+
+      const name = form.fullname.value.trim();
+      const comment = form.comment.value.trim();
+
+      if (!comment) {
+        responseEl.textContent = "กรุณากรอกความคิดเห็นก่อนส่งค่ะ";
+        return;
+      }
+
+      fetch('https://script.google.com/macros/s/SCRIPT_URL_HERE/exec', {
+        method: 'POST',
+        body: new URLSearchParams(new FormData(form))
+      })
+      .then(() => {
+        responseEl.textContent = "ส่งข้อมูลสำเร็จ ขอบคุณค่ะ";
+        form.reset();
+        loadComments(); // โหลดความคิดเห็นใหม่
+      })
+      .catch(() => {
+        responseEl.textContent = "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งนะคะ";
+      });
+    };
+
+    function loadComments() {
+      fetch('https://script.google.com/macros/s/SCRIPT_URL_HERE/exec')
+        .then(res => res.json())
+        .then(data => {
+          commentsDiv.innerHTML = '';
+          if (data.length === 0) {
+            commentsDiv.innerHTML = '<p>ยังไม่มีความคิดเห็น</p>';
+            return;
+          }
+          data.reverse().forEach(entry => {
+            const div = document.createElement('div');
+            div.className = 'comment-entry';
+            div.innerHTML = `<strong>${entry.name}</strong><br>
+                             <em>${new Date(entry.date).toLocaleString()}</em><br>
+                             <p>${entry.comment}</p>`;
+            commentsDiv.appendChild(div);
+          });
+        })
+        .catch(() => {
+          commentsDiv.innerHTML = '<p>ไม่สามารถโหลดความคิดเห็นได้</p>';
+        });
+    }
+
+    // เรียกเมื่อโหลดหน้าเว็บ
+    window.onload = () => {
+      loadComments();
+    };
+  </script>
+</body>
 </html>
