@@ -57,7 +57,7 @@
       <p>กิจกรรมที่จัด: ครูหรือคนที่ได้รับเชิญที่มาที่ซุ้ม 5 คนแรก เพียงแสดงบัตรเชิญก็จะได้รางวัลพิเศษ</p>
       <br>
       <center>
-      <form>
+        <form id="commentform">
   <label>ความคิดเห็นที่มีต่อเว็บ
     <br>
       <textarea name="comment" rows="8" placeholder="ใส่ความคิดเห็นของคุณ"></textarea>
@@ -66,6 +66,23 @@
       <button type="submit">ส่งข้อมูล</button>
       </form>
       <p id="response"></p>
+        <script>
+                const form = document.getElementById('commentform');
+        const responseEl = document.getElementById('response');
+        form.onsubmit = e =>{
+        e.preventDefault();
+          fetch('https://script.google.com/macros/s/AKfycbwKpnC2lGTifZjqtoBda-VWr1zRsMo5k3UbmkIyVKLgIDpjO6yAbqEpASZ2JPsKVEs8/exec',
+          {
+            method: 'POST',
+              body: new URLSearchParams(new FormData(form))
+        })
+          .then(() => {
+          responseEl.textContent="ส่งข้อมูลสำเร็จ ขอบคุณค่ะ";
+          form.reset();
+        })
+        .catch(() => responseEl.textContent="เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้งนะคะ");
+        };
+      </script>
         </center>
   </div>
   <footer>
