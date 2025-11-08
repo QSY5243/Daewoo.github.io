@@ -2,43 +2,71 @@
   <head>
     <title>วันลอยกระทง</title>
     <style>
-      body{color:blue;
-          text-align:center;
-          cursor: url("kar.png"),auto; height: 100vh;
-          animation: flicker 1.5s infinite alternate;}
-          @keyframes flicker
-      {50% {background color: #FFFFCC;}
-       100% {background color: #FFB6C1;}
-       header{background-color: rgba(110, 232, 189, 0.5);
-              padding: 20px;
-              border-radius: 10px;}
-       section{width: 80%;
-               background-color: rgba(123, 255, 149, 0.52);
-               margin: 10px autp;
-               text-align: left;
-               border-radius: 15px;
-               color: Orchid;}
-      .blink{color: #CD5C5C;
-             font-size: 30px;
-             animation: flash 5s infinite;}
-      @keyframes flash
-      {0% 100% {opacity:1;}
-       100% {opacity:0;}
-          .img{border: 5px;
-              border-radius: 15px;
-              width: 400px;
-              height: 300px;}
-      img hover{box-shadow: 0 0 20px #FFD700;}
+      body {
+        color: blue;
+        text-align: center;
+        cursor: url("kar.png"), auto;
+        height: 100vh;
+        animation: flicker 1.5s infinite alternate;
+      }
+
+      @keyframes flicker {
+        50% { background-color: #FFFFCC; }
+        100% { background-color: #FFB6C1; }
+      }
+
+      .header {
+        background-color: rgba(110, 232, 189, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 24px;
+      }
+
+      section {
+        width: 80%;
+        background-color: rgba(123, 255, 149, 0.52);
+        margin: 10px auto;
+        text-align: left;
+        border-radius: 15px;
+        color: orchid;
+        padding: 20px;
+      }
+
+      .blink {
+        color: #CD5C5C;
+        font-size: 30px;
+        animation: flash 1s infinite;
+      }
+
+      @keyframes flash {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      img {
+        border: 5px solid #ccc;
+        border-radius: 15px;
+        width: 400px;
+        height: 300px;
+        transition: box-shadow 0.3s;
+      }
+
+      img:hover {
+        box-shadow: 0 0 20px #FFD700;
+      }
     </style>
   </head>
+
   <body>
-    <header>🌕 สุขสันต์วันลอยกระทง 🌲วันลอยกระทง 2568 
-ประวัติวันลอยกระทง ตำนานและความเชื่อประเพณีลอยกระทง
-</header>
+    <header class="header">
+      🌕 สุขสันต์วันลอยกระทง 🌲<br>
+      วันลอยกระทง 2568 ประวัติวันลอยกระทง ตำนานและความเชื่อประเพณีลอยกระทง
+    </header>
+
     <section>
       <center>
-      <img src="https://lh3.googleusercontent.com/a-/ALV-UjXaPpnt8v_lNmIHX_Ft5nzYIF5g5UJ-bSHIqymNM42M55Nz7CG4=s240-p-k-rw-no">
-    </center>
+        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXaPpnt8v_lNmIHX_Ft5nzYIF5g5UJ-bSHIqymNM42M55Nz7CG4=s240-p-k-rw-no" alt="ภาพวันลอยกระทง">
+      </center>
     </section>
   </body>
 </html>
